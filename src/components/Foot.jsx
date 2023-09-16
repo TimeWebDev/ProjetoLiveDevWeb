@@ -1,13 +1,13 @@
 import {} from 'react'
 
-function Login() {
+function Foot() {
 
 
   return (
     <>
-    <h1>Login</h1>
+    <h1>Foot</h1>
     </>
   )
 }
 
-export default Login
+export default Foot
