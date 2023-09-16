@@ -16,5 +16,5 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
-  },
+  },"react/prps-types": "off"
 }
