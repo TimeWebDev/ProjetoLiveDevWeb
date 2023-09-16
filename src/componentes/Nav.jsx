@@ -1,13 +1,13 @@
 import {} from 'react'
 
-function App() {
+function Nav() {
 
 
   return (
     <>
-  
+    <h1>Home</h1>
     </>
   )
 }
 
-export default App
+export default Nav

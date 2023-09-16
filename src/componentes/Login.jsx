@@ -1,13 +1,13 @@
 import {} from 'react'
 
-function App() {
+function Login() {
 
 
   return (
     <>
-  
+    <h1>Login</h1>
     </>
   )
 }
 
-export default App
+export default Login
