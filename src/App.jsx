@@ -1,6 +1,7 @@
 import Nav from './components/Nav';
 import Foot from './components/Foot';
 import { Outlet } from 'react-router-dom';
+import ModalInserirProdutos from './components/ModalInserirProdutos';
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
     <>
       <Nav/>
         <Outlet/>
+        <ModalInserirProdutos/>
       <Foot/>
     </>
   )

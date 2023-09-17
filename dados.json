@@ -13,6 +13,20 @@
       "desc": "Grande sucesso da Nintendo",
       "preco": 58.99,
       "img": ""
+    },
+    {
+      "id": 7,
+      "nome": "Cubo",
+      "preco": "10",
+      "desc": "Um Cubo",
+      "img": ""
+    },
+    {
+      "id": 8,
+      "nome": "Cubo",
+      "preco": "232323",
+      "desc": "Um Cubo",
+      "img": ""
     }
   ]
 }
