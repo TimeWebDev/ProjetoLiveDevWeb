@@ -6,7 +6,21 @@
           "desc":"Recriação da franquia de um dos maiores sucessos",
           "preco":78.99,
           "img":""
-      }
+      },
+      {
+        "id":2,
+        "nome":"Mario Brothers",
+        "desc":"Grande sucesso da Nintendo",
+        "preco":58.99,
+        "img":""
+    },
+    {
+      "id":3,
+      "nome":"SONIC",
+      "desc":"Jogo do porquinho",
+      "preco":28.99,
+      "img":""
+  }
   ]
 
 }
