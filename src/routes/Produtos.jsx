@@ -16,7 +16,9 @@ export default function Produtos() {
   )
 
   const handleDelete = (id)=>{
-    
+    fetch("http://localhost:5000/produtos/"+id,{ method:"delete"})
+      .then(()=> window.location = '/produtos')
+      .catch( error => console.log(error))
   }
 
 
@@ -45,8 +47,8 @@ export default function Produtos() {
                   <td>{prod.desc}</td>
                   <td>{prod.preco}</td>
                   <td>
-                    {/* <Link to={`/editar/${prod.id}`}>Editar</Link>
-                    <button onClick={handleDelete.bind(this, prod.id)}>Deletar</button> */}
+                    {/* <Link to={`/editar/${prod.id}`}>Editar</Link> */}
+                    <button onClick={handleDelete.bind(this, prod.id)}>Deletar</button>
                   </td>
               </tr>
             ))
