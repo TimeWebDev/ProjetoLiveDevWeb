@@ -1,0 +1,12 @@
+{
+  "produtos":[
+      {
+          "id":1,
+          "nome":"Resident Evil 3 Remake",
+          "desc":"Recriação da franquia de um dos maiores sucessos",
+          "preco":78.99,
+          "img":""
+      }
+  ]
+
+}
