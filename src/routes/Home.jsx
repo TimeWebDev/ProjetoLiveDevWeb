@@ -1,7 +1,10 @@
 import React from 'react'
+import styles from '../css/home.module.css';
 
 export default function Home() {
   return (
-    <div>Home</div>
+    <section className={styles.home}>
+      <h1>Home</h1>
+      </section>
   )
 }

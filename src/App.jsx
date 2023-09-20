@@ -4,16 +4,14 @@ import { Outlet } from 'react-router-dom';
 import ModalInserirProdutos from './components/ModalInserirProdutos';
 
 function App() {
-
-
   return (
     <>
-      <Nav/>
-        <Outlet/>
-        <ModalInserirProdutos/>
-      <Foot/>
+      <Nav />
+      <Outlet />
+
+      <Foot />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

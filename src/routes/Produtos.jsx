@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import React, { useEffect, useState } from 'react'
+import styles from '../css/Produtos.module.css';
+import ModalInserirProdutos from '../components/ModalInserirProdutos';
 
 export default function Produtos() {
 
@@ -23,12 +25,12 @@ export default function Produtos() {
 
 
   return (
-    <div>
+    <div className={styles.produto}>
       <h1>Lista de Jogos</h1>
 
       <Link to="/cadastrar">Adicionar novo jogo.</Link>
 
-      <table>
+      <table className={styles.table}>
         <thead>
           <tr>
             <th>Imagem</th>
@@ -60,6 +62,7 @@ export default function Produtos() {
           </tr>
         </tfoot>
       </table>
+      <ModalInserirProdutos />
     </div>
   )
 }

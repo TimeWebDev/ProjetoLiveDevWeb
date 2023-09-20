@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+  padding:0 ;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.menu {
+  background-color: #0E0255;
+  width: 100%;
+  height: 60px;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+
+  list-style: none;
+  color: white;
+  position: fixed;
+}
+
+.menuNav {
+  font-size: 25px;
+}
+.menuNnavulli {
+  display: flex;
+  list-style: none;
+}
+
+.tlink {
+  color: white;
+  padding: 5px;
+}

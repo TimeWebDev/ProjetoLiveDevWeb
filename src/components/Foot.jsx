@@ -1,12 +1,13 @@
 import {} from 'react'
+import styles from '../css/footer.module.css'
 
 function Foot() {
 
 
   return (
-    <>
-    <h1>Foot</h1>
-    </>
+    <section className={styles.footer}>
+    <h1 className={styles.titFooter}>Foot</h1>
+    </section>
   )
 }
 
