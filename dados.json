@@ -1,32 +1,3 @@
 {
-  "produtos": [
-    {
-      "id": 1,
-      "nome": "Resident Evil 3 Remake",
-      "desc": "Recriação da franquia de um dos maiores sucessos",
-      "preco": 78.99,
-      "img": ""
-    },
-    {
-      "id": 2,
-      "nome": "Mario Brothers",
-      "desc": "Grande sucesso da Nintendo",
-      "preco": 58.99,
-      "img": ""
-    },
-    {
-      "id": 7,
-      "nome": "Cubo",
-      "preco": "10",
-      "desc": "Um Cubo",
-      "img": ""
-    },
-    {
-      "id": 8,
-      "nome": "Cubo",
-      "preco": "232323",
-      "desc": "Um Cubo",
-      "img": ""
-    }
-  ]
+  "produtos": []
 }

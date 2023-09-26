@@ -1,55 +1,58 @@
-import { useState,useEffect} from "react";
+import { useState, useEffect } from 'react';
 import styles from '../css/ModalInsert.module.css';
 
 export default function ModalInserirProdutos(props) {
 
+  if(props.open){
+
   //Título da página
-  document.title = "Cadastrar Produtos";
+    document.title = 'Cadastrar Produtos';
 
   //ID do produto sendo recebido por props
   const fr = new FileReader();
-  
+  const [image, setImage] = useState();
+
   //Objeto de dados do produto:
   const [produto, setProduto] = useState({
-    id: "",
-    nome: "",
-    preco: "",
-    desc: "",
-    img: "",
+    id: '',
+    nome: '',
+    preco: '',
+    desc: '',
+    img: image,
   });
 
   useEffect(() => {
-    fetch(`http://localhost:5000/produtos`)       
-        .then((response) => response.json())
-        .then((data) =>{ console.log(data)
-            setProduto({...produto, ["id"]: (data[data.length-1].id+1)})
-        })
-        .catch(err => console.log(err));
-  }, [])
-  
+    fetch(`http://localhost:5000/produtos`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setProduto({ ...produto, ['id']: data[data.length - 1].id + 1 });
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
-  const [image, setImage] = useState();
+ 
 
-//Função de preenchimento dos campos:
-const handleChange = (e) => {
+  //Função de preenchimento dos campos:
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    setProduto({...produto,[name]:value});
-}
+    setProduto({ ...produto, [name]: value });
+  };
 
-const handleSubmit = (e) => {
-  e.preventDefault();
-    fetch(`http://localhost:5000/produtos`,{
-        method: "POST",
-        body: JSON.stringify(produto),
-        headers: { "Content-Type":"application/json" } 
-      })       
-        .then((response) => response.json())
-        .then(data => console.log(data))
-        .catch(err => console.log(err));
-        
-        //Encerrar o modal:
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetch(`http://localhost:5000/produtos`, {
+      method: 'POST',
+      body: JSON.stringify(produto),
+      headers: { 'Content-Type': 'application/json' },
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((err) => console.log(err));
 
-}
+    //Encerrar o modal
+    props.setOpen(false);
+  };
 
   return (
     <>
@@ -99,7 +102,15 @@ const handleSubmit = (e) => {
               />
             </div>
             <div>
-               {image ? <img src={URL.createObjectURL(image)} alt="IMAGEM" width="100px"/> : <img src="/novo-produto.png" alt="IMAGEM" width="100px"/>}
+              {image ? (
+                <img
+                  src={URL.createObjectURL(image)}
+                  alt="IMAGEM"
+                  width="100px"
+                />
+              ) : (
+                <img src="/novo-produto.png" alt="IMAGEM" width="100px" />
+              )}
             </div>
             <div>
               <button>Cadastrar</button>
@@ -108,9 +119,9 @@ const handleSubmit = (e) => {
         </form>
       </div>
     </>
-  )
+  );
 }
-
+}
 
 //Campos que serão prenchidos
 //ID-NOME-PREÇO-DESCRIÇÃO-IMG
