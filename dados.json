@@ -1,94 +1,22 @@
 {
   "produtos": [
     {
-      "nome": "asd",
+      "nome": "Resident Evil 4",
       "preco": "8",
-      "desc": "lkj",
+      "desc": "aaa",
       "id": 1
     },
     {
-      "0": {
-        "nome": "asd",
-        "preco": "8",
-        "desc": "lkj",
-        "id": 1
-      },
-      "nome": "dasd",
-      "preco": "3",
-      "desc": "asdasd",
+      "nome": "River Raid",
+      "preco": "15",
+      "desc": "aaaa",
       "id": 2
     },
     {
-      "0": {
-        "nome": "asd",
-        "preco": "8",
-        "desc": "lkj",
-        "id": 1
-      },
-      "1": {
-        "0": {
-          "nome": "asd",
-          "preco": "8",
-          "desc": "lkj",
-          "id": 1
-        },
-        "nome": "dasd",
-        "preco": "3",
-        "desc": "asdasd",
-        "id": 2
-      },
-      "nome": "asdasd",
-      "preco": "2",
-      "desc": "aaaa",
+      "nome": "Luís Silva",
+      "preco": "8",
+      "desc": "qaaaaaaaaaaaaa",
       "id": 3
-    },
-    {
-      "0": {
-        "nome": "asd",
-        "preco": "8",
-        "desc": "lkj",
-        "id": 1
-      },
-      "1": {
-        "0": {
-          "nome": "asd",
-          "preco": "8",
-          "desc": "lkj",
-          "id": 1
-        },
-        "nome": "dasd",
-        "preco": "3",
-        "desc": "asdasd",
-        "id": 2
-      },
-      "2": {
-        "0": {
-          "nome": "asd",
-          "preco": "8",
-          "desc": "lkj",
-          "id": 1
-        },
-        "1": {
-          "0": {
-            "nome": "asd",
-            "preco": "8",
-            "desc": "lkj",
-            "id": 1
-          },
-          "nome": "dasd",
-          "preco": "3",
-          "desc": "asdasd",
-          "id": 2
-        },
-        "nome": "asdasd",
-        "preco": "2",
-        "desc": "aaaa",
-        "id": 3
-      },
-      "nome": "qwert",
-      "preco": "2",
-      "desc": "qwert",
-      "id": 4
     }
   ]
 }

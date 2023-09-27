@@ -15,14 +15,7 @@ export default function Produtos() {
       .catch((error) => console.log(error));
   }, []);
 
-  const atualizar = ()=>{
-      fetch('http://localhost:5000/produtos')
-        .then((resp) => resp.json())
-        .then((resp) => setProdutos(resp))
-        .catch((error) => console.log(error));
-    }
-
-
+  
   const handleDelete = (id) => {
     fetch('http://localhost:5000/produtos/' + id, { method: 'delete' })
       .then(() => (window.location = '/produtos'))
@@ -73,7 +66,7 @@ export default function Produtos() {
           </tr>
         </tfoot>
       </table>
-      {open ? <ModalInserirProdutos atualizar={atualizar} open={open} setOpen={setOpen} produtoId={produtoId}/> : ''}
+      {open ? <ModalInserirProdutos open={open} setOpen={setOpen} produtoId={produtoId}/> : ''}
     </div>
   );
 }

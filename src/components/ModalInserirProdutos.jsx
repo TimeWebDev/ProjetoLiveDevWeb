@@ -5,11 +5,7 @@ import styles from '../css/ModalInsert.module.css';
 export default function ModalInserirProdutos(props) {
 
   let prodId = props.produtoId
-  const [listaProdutos, setListaProdutos]=useState([])
-
-
-  if(props.open){
-
+      console.log(prodId);
   //Título da página
     if(prodId){
       document.title = 'Editar Produto';
@@ -23,7 +19,6 @@ export default function ModalInserirProdutos(props) {
 
   //Objeto de dados do produto:
   const [produto, setProduto] = useState({
-    id: '',
     nome: '',
     preco: '',
     desc: '',
@@ -45,19 +40,24 @@ export default function ModalInserirProdutos(props) {
   };
 
 
+
   //Carrega as informações em caso de edição
-  useEffect(()=>{     
+  
+  useEffect(()=>{ 
+      if(prodId != ''){
         fetch(`http://localhost:5000/produtos/${prodId}`)
       .then((resp) => resp.json())
       .then((resp) => setProduto(resp))
       .catch((error) => console.log(error));
+      }
   },[prodId])
 
 
   const handleSubmit = (e) => {
+    // console.log(produto);
     e.preventDefault();
-    fetch(`http://localhost:5000/produtos`, {
-      method: 'POST',
+    fetch(`http://localhost:5000/produtos/${prodId ? prodId : ''}`, {
+      method: metodo,
       body: JSON.stringify(produto),
       headers: { 'Content-Type': 'application/json' },
     })
@@ -138,7 +138,7 @@ export default function ModalInserirProdutos(props) {
     </div>
   );
 }
-}
+
 
 //Campos que serão prenchidos
 //ID-NOME-PREÇO-DESCRIÇÃO-IMG
