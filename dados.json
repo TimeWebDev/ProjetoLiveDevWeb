@@ -1,3 +1,10 @@
 {
-  "produtos": []
+  "produtos": [
+    {
+      "nome": "asd",
+      "preco": "8",
+      "desc": "lkj",
+      "id": 1
+    }
+  ]
 }

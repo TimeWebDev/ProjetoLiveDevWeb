@@ -1,11 +1,13 @@
 .footer{
   width: 100%;
-  height: 200px;
+  height: 15vh;
   background-color: #0E0255;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .titFooter{
   text-align: center;
   color: white;
-  padding-top: 30px;
 }

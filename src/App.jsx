@@ -1,5 +1,5 @@
 import Nav from './components/Nav';
-import Foot from './components/Foot';
+import Footer from './components/Footer';
 import { Outlet } from 'react-router-dom';
 import ModalInserirProdutos from './components/ModalInserirProdutos';
 
@@ -8,8 +8,7 @@ function App() {
     <>
       <Nav />
       <Outlet />
-
-      <Foot />
+      <Footer />
     </>
   );
 }

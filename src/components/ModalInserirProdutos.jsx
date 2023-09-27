@@ -3,10 +3,18 @@ import styles from '../css/ModalInsert.module.css';
 
 export default function ModalInserirProdutos(props) {
 
+  let prodId = props.produtoId
+  const [listaProdutos, setListaProdutos]=useState([])
+
+
   if(props.open){
 
   //Título da página
-    document.title = 'Cadastrar Produtos';
+    if(prodId){
+      document.title = 'Editar Produto';
+    }else{
+      document.title = 'Cadastrar Produtos';
+    }
 
   //ID do produto sendo recebido por props
   const fr = new FileReader();
@@ -21,17 +29,13 @@ export default function ModalInserirProdutos(props) {
     img: image,
   });
 
-  useEffect(() => {
-    fetch(`http://localhost:5000/produtos`)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setProduto({ ...produto, ['id']: data[data.length - 1].id + 1 });
-      })
-      .catch((err) => console.log(err));
-  }, []);
-
+  
  
+  //Definindo se é cadastro ou Edição
+  let metodo = 'post'
+  if(prodId){
+    metodo = 'put'
+  }
 
   //Função de preenchimento dos campos:
   const handleChange = (e) => {
@@ -39,10 +43,20 @@ export default function ModalInserirProdutos(props) {
     setProduto({ ...produto, [name]: value });
   };
 
+
+  //Carrega as informações em caso de edição
+  useEffect(()=>{     
+        fetch(`http://localhost:5000/produtos/${prodId}`)
+      .then((resp) => resp.json())
+      .then((resp) => setProduto(resp))
+      .catch((error) => console.log(error));
+  },[prodId])
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:5000/produtos`, {
-      method: 'POST',
+    fetch(`http://localhost:5000/produtos/${prodId ? prodId : ""}`, {
+      method: metodo,
       body: JSON.stringify(produto),
       headers: { 'Content-Type': 'application/json' },
     })
@@ -54,10 +68,19 @@ export default function ModalInserirProdutos(props) {
     props.setOpen(false);
   };
 
+  const inserirImagem = (e)=>{
+    setImage(e.target.files[0])
+    setProduto({ ...produto, img: image });    
+  }
+
   return (
-    <>
+    <div className={styles.fundo}>
       <div className={styles.modInsert}>
-        <h1>Cadastrar Produtos</h1>
+        <h1>
+        {
+          prodId ? 'Editar Produto' : 'Cadastrar Produtos'
+        }
+        </h1>
         <form onSubmit={handleSubmit}>
           <fieldset>
             <legend>Informações do Produto</legend>
@@ -98,7 +121,8 @@ export default function ModalInserirProdutos(props) {
                 id="idImg"
                 name="img"
                 value={produto.img}
-                onChange={(e) => setImage(e.target.files[0])}
+                onChange={inserirImagem}
+                // onChange={(e) => setImage(e.target.files[0])}
               />
             </div>
             <div>
@@ -118,7 +142,7 @@ export default function ModalInserirProdutos(props) {
           </fieldset>
         </form>
       </div>
-    </>
+    </div>
   );
 }
 }

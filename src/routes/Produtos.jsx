@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import styles from '../css/Produtos.module.css';
 import ModalInserirProdutos from '../components/ModalInserirProdutos';
 
+
 export default function Produtos() {
   const [produtos, setProdutos] = useState([]);
   const [open, setOpen] = useState(false);
@@ -14,19 +15,23 @@ export default function Produtos() {
       .catch((error) => console.log(error));
   }, []);
 
+
   const handleDelete = (id) => {
     fetch('http://localhost:5000/produtos/' + id, { method: 'delete' })
       .then(() => (window.location = '/produtos'))
       .catch((error) => console.log(error));
   };
 
+  const [produtoId, setProdutoId]=useState('')
+  const handleEdit = (prod)=>{
+    setProdutoId(prod)     
+    setOpen(true)      
+  }
+
   return (
     <div className={styles.produto}>
        <button onClick={() => setOpen(true)} className={styles.button}>Cadastrar Jogo</button>
       <h1 className={styles.tituloProduto}>Lista de Jogos</h1>
-
-     
-
       <table className={styles.table}>
         <thead>
           <tr>
@@ -40,13 +45,15 @@ export default function Produtos() {
         <tbody>
           {produtos.map((prod) => (
             <tr key={prod.id}>
-              <td>{prod.img}</td>
+              <td><img src={prod.img} alt="" /> </td>
               <td>{prod.nome}</td>
               <td>{prod.desc}</td>
               <td>{prod.preco}</td>
               <td>
-                {/* <Link to={`/editar/${prod.id}`}>Editar</Link> */}
-                <button onClick={handleDelete.bind(this, prod.id)}>
+                <button className='editar' onClick={handleEdit.bind(this, prod.id)}>
+                  Editar
+                  </button>
+                <button className='deletar' onClick={handleDelete.bind(this, prod.id)}>
                   Deletar
                 </button>
               </td>
@@ -59,7 +66,7 @@ export default function Produtos() {
           </tr>
         </tfoot>
       </table>
-      {open ? <ModalInserirProdutos open={open} setOpen={setOpen} /> : ''}
+      {open ? <ModalInserirProdutos open={open} setOpen={setOpen} produtoId={produtoId}/> : ''}
     </div>
   );
 }

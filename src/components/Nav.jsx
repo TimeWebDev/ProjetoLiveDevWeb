@@ -4,7 +4,7 @@ import styles from '../css/header.module.css';
 
 function Nav() {
   return (
-    <section className={styles.menu}>
+    <header className={styles.menu}>
       <nav className={styles.menuNav}>
         <ul className={styles.menuNnavulli}>
           <li>
@@ -30,7 +30,7 @@ function Nav() {
           </li>
         </ul>
       </nav>
-    </section>
+    </header>
   );
 }
 
