@@ -1,4 +1,5 @@
 import { useState,useEffect} from "react";
+import style from "./ModalInserirProdutos.module.css";
 
 export default function ModalInserirProdutos(props) {
 
@@ -32,7 +33,11 @@ export default function ModalInserirProdutos(props) {
 //Função de preenchimento dos campos:
 const handleChange = (e) => {
     const { name, value } = e.target;
-    setProduto({...produto,[name]:value});
+    if (name == "img") { 
+      setProduto({...produto,[name]:value});
+    }else{
+      setProduto({...produto,[name]:value});
+    }
 }
 
 const handleSubmit = (e) => {
@@ -47,15 +52,16 @@ const handleSubmit = (e) => {
         .catch(err => console.log(err));
         
         //Encerrar o modal:
-
+        props.setOpen(false);
 }
 
   return (
     <>
-      <div>
+      <div className={style.baseModal}>
         <h1>Cadastrar Produtos</h1>
         <form onSubmit={handleSubmit}>
           <fieldset>
+        <button onClick={()=> props.setOpen(false)}>X</button>
             <legend>Informações do Produto</legend>
             <div>
               <label htmlFor="idNome">Nome:</label>
@@ -94,7 +100,7 @@ const handleSubmit = (e) => {
                 id="idImg"
                 name="img"
                 value={produto.img}
-                onChange={(e) => setImage(e.target.files[0])}
+                onChange={handleChange}
               />
             </div>
             <div>

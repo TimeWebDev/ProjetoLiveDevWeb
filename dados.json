@@ -27,6 +27,13 @@
       "preco": "232323",
       "desc": "Um Cubo",
       "img": ""
+    },
+    {
+      "id": 9,
+      "nome": "Dominó",
+      "preco": "34",
+      "desc": "Plástico",
+      "img": ""
     }
   ]
 }

@@ -1,10 +1,14 @@
 import { Link } from 'react-router-dom'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
+import ModalInserirProdutos from '../components/ModalInserirProdutos';
 
 export default function Produtos() {
 
 
-  const [produtos, setProdutos]= useState([])
+  const [produtos, setProdutos]= useState([]);
+
+  //state controlador da abertura do modal de inserir produtos:
+  const [open, setOpen] = useState(false);
 
   useEffect(
     ()=>{
@@ -21,13 +25,12 @@ export default function Produtos() {
       .catch( error => console.log(error))
   }
 
-
   return (
     <div>
       <h1>Lista de Jogos</h1>
 
-      <Link to="/cadastrar">Adicionar novo jogo.</Link>
-
+      <Link onClick={()=> setOpen(true)}>Cadastrar Novo Game</Link>
+      {open ? <ModalInserirProdutos open={open} setOpen={setOpen}/> : ''}
       <table>
         <thead>
           <tr>
@@ -42,7 +45,7 @@ export default function Produtos() {
           {
             produtos.map(prod => (
               <tr key={prod.id}>
-                  <td>{prod.img}</td>
+                  <td><img src={prod.img} alt=""/></td>
                   <td>{prod.nome}</td>
                   <td>{prod.desc}</td>
                   <td>{prod.preco}</td>

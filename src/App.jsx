@@ -10,7 +10,6 @@ function App() {
     <>
       <Nav/>
         <Outlet/>
-        <ModalInserirProdutos/>
       <Foot/>
     </>
   )
