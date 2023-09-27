@@ -55,8 +55,8 @@ export default function ModalInserirProdutos(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:5000/produtos/${prodId ? prodId : ""}`, {
-      method: metodo,
+    fetch(`http://localhost:5000/produtos`, {
+      method: 'POST',
       body: JSON.stringify(produto),
       headers: { 'Content-Type': 'application/json' },
     })
@@ -68,21 +68,13 @@ export default function ModalInserirProdutos(props) {
     props.setOpen(false);
   };
 
-  const inserirImagem = (e)=>{
-    setImage(e.target.files[0])
-    setProduto({ ...produto, img: image });    
-  }
-
   return (
-    <div className={styles.fundo}>
+    <>
       <div className={styles.modInsert}>
-        <h1>
-        {
-          prodId ? 'Editar Produto' : 'Cadastrar Produtos'
-        }
-        </h1>
+        <h1>Cadastrar Produtos</h1>
         <form onSubmit={handleSubmit}>
           <fieldset>
+        <button onClick={()=> props.setOpen(false)}>X</button>
             <legend>Informações do Produto</legend>
             <div>
               <label htmlFor="idNome">Nome:</label>
@@ -121,8 +113,7 @@ export default function ModalInserirProdutos(props) {
                 id="idImg"
                 name="img"
                 value={produto.img}
-                onChange={inserirImagem}
-                // onChange={(e) => setImage(e.target.files[0])}
+                onChange={(e) => setImage(e.target.files[0])}
               />
             </div>
             <div>

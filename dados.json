@@ -1,10 +1,43 @@
 {
+<<<<<<< HEAD
   "produtos": [
     {
-      "nome": "asd",
-      "preco": "8",
-      "desc": "lkj",
-      "id": 1
+      "id": 1,
+      "nome": "Resident Evil 3 Remake",
+      "desc": "Recriação da franquia de um dos maiores sucessos",
+      "preco": 78.99,
+      "img": ""
+    },
+    {
+      "id": 2,
+      "nome": "Mario Brothers",
+      "desc": "Grande sucesso da Nintendo",
+      "preco": 58.99,
+      "img": ""
+    },
+    {
+      "id": 7,
+      "nome": "Cubo",
+      "preco": "10",
+      "desc": "Um Cubo",
+      "img": ""
+    },
+    {
+      "id": 8,
+      "nome": "Cubo",
+      "preco": "232323",
+      "desc": "Um Cubo",
+      "img": ""
+    },
+    {
+      "id": 9,
+      "nome": "Dominó",
+      "preco": "34",
+      "desc": "Plástico",
+      "img": ""
     }
   ]
+=======
+  "produtos": []
+>>>>>>> aede6cca6f7f96d504f98e6e5044360d51498aaa
 }
