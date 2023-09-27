@@ -6,11 +6,6 @@ import ModalInserirProdutos from './components/ModalInserirProdutos';
 function App() {
   return (
     <>
-<<<<<<< HEAD
-      <Nav/>
-        <Outlet/>
-      <Foot/>
-=======
       <Nav />
       <Outlet />
       <Footer />

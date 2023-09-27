@@ -1,43 +1,94 @@
 {
-<<<<<<< HEAD
   "produtos": [
     {
-      "id": 1,
-      "nome": "Resident Evil 3 Remake",
-      "desc": "Recriação da franquia de um dos maiores sucessos",
-      "preco": 78.99,
-      "img": ""
+      "nome": "asd",
+      "preco": "8",
+      "desc": "lkj",
+      "id": 1
     },
     {
-      "id": 2,
-      "nome": "Mario Brothers",
-      "desc": "Grande sucesso da Nintendo",
-      "preco": 58.99,
-      "img": ""
+      "0": {
+        "nome": "asd",
+        "preco": "8",
+        "desc": "lkj",
+        "id": 1
+      },
+      "nome": "dasd",
+      "preco": "3",
+      "desc": "asdasd",
+      "id": 2
     },
     {
-      "id": 7,
-      "nome": "Cubo",
-      "preco": "10",
-      "desc": "Um Cubo",
-      "img": ""
+      "0": {
+        "nome": "asd",
+        "preco": "8",
+        "desc": "lkj",
+        "id": 1
+      },
+      "1": {
+        "0": {
+          "nome": "asd",
+          "preco": "8",
+          "desc": "lkj",
+          "id": 1
+        },
+        "nome": "dasd",
+        "preco": "3",
+        "desc": "asdasd",
+        "id": 2
+      },
+      "nome": "asdasd",
+      "preco": "2",
+      "desc": "aaaa",
+      "id": 3
     },
     {
-      "id": 8,
-      "nome": "Cubo",
-      "preco": "232323",
-      "desc": "Um Cubo",
-      "img": ""
-    },
-    {
-      "id": 9,
-      "nome": "Dominó",
-      "preco": "34",
-      "desc": "Plástico",
-      "img": ""
+      "0": {
+        "nome": "asd",
+        "preco": "8",
+        "desc": "lkj",
+        "id": 1
+      },
+      "1": {
+        "0": {
+          "nome": "asd",
+          "preco": "8",
+          "desc": "lkj",
+          "id": 1
+        },
+        "nome": "dasd",
+        "preco": "3",
+        "desc": "asdasd",
+        "id": 2
+      },
+      "2": {
+        "0": {
+          "nome": "asd",
+          "preco": "8",
+          "desc": "lkj",
+          "id": 1
+        },
+        "1": {
+          "0": {
+            "nome": "asd",
+            "preco": "8",
+            "desc": "lkj",
+            "id": 1
+          },
+          "nome": "dasd",
+          "preco": "3",
+          "desc": "asdasd",
+          "id": 2
+        },
+        "nome": "asdasd",
+        "preco": "2",
+        "desc": "aaaa",
+        "id": 3
+      },
+      "nome": "qwert",
+      "preco": "2",
+      "desc": "qwert",
+      "id": 4
     }
   ]
-=======
-  "produtos": []
->>>>>>> aede6cca6f7f96d504f98e6e5044360d51498aaa
 }

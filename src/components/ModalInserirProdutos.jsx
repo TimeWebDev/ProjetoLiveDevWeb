@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from '../css/ModalInsert.module.css';
 
+
 export default function ModalInserirProdutos(props) {
 
   let prodId = props.produtoId
@@ -66,10 +67,11 @@ export default function ModalInserirProdutos(props) {
 
     //Encerrar o modal
     props.setOpen(false);
+    
   };
 
   return (
-    <>
+    <div className={styles.fundo}>
       <div className={styles.modInsert}>
         <h1>Cadastrar Produtos</h1>
         <form onSubmit={handleSubmit}>
