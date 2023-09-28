@@ -12,9 +12,7 @@
   color: white;
   font-weight: bold;
   margin: 5px;
-
 }
-
 
 .modInsert form label{
   display: inline-block;
@@ -27,16 +25,25 @@
 
 }
 
-
-
 .fundo{
   position: absolute;
   top: 0px;
   left: 0px;
   width: 100vw;
   height: 100vh;
-  background-color: #555555dd;
+  background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.3));
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.tituloCadProd{
+  color:#222;
+  text-align: center;
+}
+.formProd{
+  background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.3));
+
+}
+.fieldProd{
+  background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.3));
 }

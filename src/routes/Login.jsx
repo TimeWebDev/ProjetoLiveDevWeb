@@ -37,7 +37,7 @@ export default function Login() {
             {/* passando a referencia na senha */}
             <input type="password" id={styles.senhaInput} ref={password} />
           </p>
-          <input type="submit" value="Login" id={styles.btnCadastrar} />
+          <input type="submit" value="LOGIN" id={styles.btnCadastrar} />
         </form>
       )}
     </section>

@@ -1,17 +1,15 @@
 import { useState, useEffect } from 'react';
 import styles from '../css/ModalInsert.module.css';
 
-
 export default function ModalInserirProdutos(props) {
-
-  let prodId = props.produtoId
-      console.log(prodId);
+  let prodId = props.produtoId;
+  console.log(prodId);
   //Título da página
-    if(prodId){
-      document.title = 'Editar Produto';
-    }else{
-      document.title = 'Cadastrar Produtos';
-    }
+  if (prodId) {
+    document.title = 'Editar Produto';
+  } else {
+    document.title = 'Cadastrar Produtos';
+  }
 
   //ID do produto sendo recebido por props
   const fr = new FileReader();
@@ -25,12 +23,10 @@ export default function ModalInserirProdutos(props) {
     img: image,
   });
 
-  
- 
   //Definindo se é cadastro ou Edição
-  let metodo = 'post'
-  if(prodId){
-    metodo = 'put'
+  let metodo = 'post';
+  if (prodId) {
+    metodo = 'put';
   }
 
   //Função de preenchimento dos campos:
@@ -39,19 +35,16 @@ export default function ModalInserirProdutos(props) {
     setProduto({ ...produto, [name]: value });
   };
 
-
-
   //Carrega as informações em caso de edição
-  
-  useEffect(()=>{ 
-      if(prodId != ''){
-        fetch(`http://localhost:5000/produtos/${prodId}`)
-      .then((resp) => resp.json())
-      .then((resp) => setProduto(resp))
-      .catch((error) => console.log(error));
-      }
-  },[prodId])
 
+  useEffect(() => {
+    if (prodId != '') {
+      fetch(`http://localhost:5000/produtos/${prodId}`)
+        .then((resp) => resp.json())
+        .then((resp) => setProduto(resp))
+        .catch((error) => console.log(error));
+    }
+  }, [prodId]);
 
   const handleSubmit = (e) => {
     // console.log(produto);
@@ -67,16 +60,15 @@ export default function ModalInserirProdutos(props) {
 
     //Encerrar o modal
     props.setOpen(false);
-    
   };
 
   return (
     <div className={styles.fundo}>
       <div className={styles.modInsert}>
-        <h1>Cadastrar Produtos</h1>
-        <form onSubmit={handleSubmit}>
-          <fieldset>
-        <button onClick={()=> props.setOpen(false)}>X</button>
+        <h1 className={styles.tituloCadProd}>Cadastrar Produtos</h1>
+        <form onSubmit={handleSubmit} className={styles.formProd}>
+          <fieldset className={styles.fieldProd}>
+            <button onClick={() => props.setOpen(false)}>X</button>
             <legend>Informações do Produto</legend>
             <div>
               <label htmlFor="idNome">Nome:</label>
@@ -138,7 +130,6 @@ export default function ModalInserirProdutos(props) {
     </div>
   );
 }
-
 
 //Campos que serão prenchidos
 //ID-NOME-PREÇO-DESCRIÇÃO-IMG
