@@ -1,22 +1,3 @@
 {
-  "produtos": [
-    {
-      "nome": "Resident Evil 4",
-      "preco": "8",
-      "desc": "aaa",
-      "id": 1
-    },
-    {
-      "nome": "River Raid",
-      "preco": "15",
-      "desc": "aaaa",
-      "id": 2
-    },
-    {
-      "nome": "Luís Silva",
-      "preco": "8",
-      "desc": "qaaaaaaaaaaaaa",
-      "id": 3
-    }
-  ]
+  "produtos": []
 }

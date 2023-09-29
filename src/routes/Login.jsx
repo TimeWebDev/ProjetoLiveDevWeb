@@ -11,7 +11,13 @@ export default function Login() {
   const getSenha = sessionStorage.getItem('senhaData');
 
   const handleSubmit = () => {
-    if (user.current.value === 'admin' && password.current.value === '12345') {
+    if (user.current.value === 'Admin' && password.current.value === '12345') {
+      //CRIANDO A AUTENTICAÇÃO USANDO O TOKEN
+      let token =
+        Math.random().toString(16).substring(2) +
+        Math.random().toString(16).substring(2);
+      sessionStorage.setItem('userData', 'Admin');
+      sessionStorage.setItem('senhaData', token);
     } else {
       alert('usuário e senha inválidos !!!');
     }
