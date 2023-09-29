@@ -68,10 +68,17 @@ export default function ModalInserirProdutos(props) {
         <h1 className={styles.tituloCadProd}>Cadastrar Produtos</h1>
         <form onSubmit={handleSubmit} className={styles.formProd}>
           <fieldset className={styles.fieldProd}>
-            <button onClick={() => props.setOpen(false)}>X</button>
-            <legend>Informações do Produto</legend>
+            <button
+              onClick={() => props.setOpen(false)}
+              className={styles.btnFechar}
+            >
+              X
+            </button>
+            <legend className={styles.info}>Informações do Produto</legend>
             <div>
-              <label htmlFor="idNome">Nome:</label>
+              <label htmlFor="idNome" className={styles.info}>
+                Nome:
+              </label>
               <input
                 type="text"
                 id="idNome"
@@ -81,7 +88,9 @@ export default function ModalInserirProdutos(props) {
               />
             </div>
             <div>
-              <label htmlFor="idPreco">Preço:</label>
+              <label htmlFor="idPreco" className={styles.info}>
+                Preço:
+              </label>
               <input
                 type="number"
                 id="idPreco"
@@ -91,7 +100,9 @@ export default function ModalInserirProdutos(props) {
               />
             </div>
             <div>
-              <label htmlFor="idDesc">Descrição:</label>
+              <label htmlFor="idDesc" className={styles.info}>
+                Descrição:
+              </label>
               <input
                 type="text"
                 id="idDesc"
@@ -101,7 +112,9 @@ export default function ModalInserirProdutos(props) {
               />
             </div>
             <div>
-              <label htmlFor="idImg">Imagem:</label>
+              <label htmlFor="idImg" className={styles.info}>
+                Imagem:
+              </label>
               <input
                 type="file"
                 id="idImg"
@@ -118,11 +131,16 @@ export default function ModalInserirProdutos(props) {
                   width="100px"
                 />
               ) : (
-                <img src="/novo-produto.png" alt="IMAGEM" width="100px" />
+                <img
+                  src="/novo-produto.png"
+                  alt="IMAGEM"
+                  width="100px"
+                  className={styles.img}
+                />
               )}
             </div>
             <div>
-              <button>Cadastrar</button>
+              <button className={styles.btnCad}>Cadastrar</button>
             </div>
           </fieldset>
         </form>

@@ -6,12 +6,33 @@
   background-color: white;
 }
 
-.modInsert form button{
+.modInsert form {
   padding: 5px 15px;
-  background-color: green;
-  color: white;
+  background-color: #0E0255;
+  color: #000;
   font-weight: bold;
   margin: 5px;
+
+}
+
+
+.btnCad{
+  padding: 5px 15px;
+  background-color: greenyellow;
+  color: #000;
+  font-weight: bold;
+  margin: 5px;
+  margin-left: 40%;
+}
+
+
+.btnFechar{
+  padding: 5px 15px;
+  background-color: red;
+  color: #000;
+  font-weight: bold;
+  margin: 5px;
+  margin-left: 80%;
 }
 
 .modInsert form label{
@@ -41,9 +62,16 @@
   text-align: center;
 }
 .formProd{
-  background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.3));
+  background-color: #0E0255;
 
 }
 .fieldProd{
-  background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.3));
+  background-color: #0E0255;;
+}
+.info{
+  color:#fff;
+  font-weight: 700;
+}
+.img{
+  margin-left: 40%;
 }
