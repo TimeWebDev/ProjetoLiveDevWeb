@@ -13,11 +13,14 @@ function Nav() {
               Home
             </Link>
           </li>
+          {/* chamar somente quando estiver logado
           <li>
             <Link to="/produtos" className={styles.tlink}>
               Produtos
             </Link>
+          
           </li>
+          */}
           <li>
             <Link to="/sobre" className={styles.tlink}>
               Sobre
