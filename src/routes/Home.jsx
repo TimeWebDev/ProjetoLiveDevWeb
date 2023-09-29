@@ -6,9 +6,7 @@ export default function Home() {
     <section className={styles.home}>
       <div className={styles.container}>
         <div className={styles.produtos}>
-          <h1 id="tituloProduto">Produtos</h1>
-
-          <p>CONHEÇAS OS NOVOS PRODUTOS DA LOJA</p>
+          <p>CONHEÇA OS NOVOS GAMES DA ATUALIDADE</p>
           <a href="" className={styles.btn}>
             Conheça mais
           </a>
