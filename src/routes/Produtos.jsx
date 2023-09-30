@@ -7,12 +7,17 @@ export default function Produtos() {
   const [produtos, setProdutos] = useState([]);
   const [open, setOpen] = useState(false);
 
+  
+
   useEffect(() => {
-    fetch('http://localhost:5000/produtos')
-      .then((resp) => resp.json())
-      .then((resp) => setProdutos(resp))
-      .catch((error) => console.log(error));
-  }, []);
+    if(!open){
+      fetch('http://localhost:5000/produtos')
+        .then((resp) => resp.json())
+        .then((resp) => setProdutos(resp))
+        .catch((error) => console.log(error))
+    }
+
+  }, [open]);
 
   
   const handleDelete = (id) => {
@@ -67,6 +72,7 @@ export default function Produtos() {
         </tfoot>
       </table>
       {open ? <ModalInserirProdutos open={open} setOpen={setOpen} produtoId={produtoId}/> : ''}
+      
     </div>
   );
 }
