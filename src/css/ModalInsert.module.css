@@ -26,12 +26,34 @@
 
 
 .btnFechar{
-  padding: 5px 15px;
+  display: block;
+  float: right;
   background-color: red;
   color: #000;
   font-weight: bold;
-  margin: 5px;
-  margin-left: 80%;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 8.5%;
+  text-align: center;
+  border: 2px solid #ccc;
+  margin: 0 3%;
+  transition: background-color 300ms, color 300ms;
+  user-select: none;
+
+  &:hover{
+    background-color: #000000;
+    color: red;
+  }
+
+  &:active{
+    background-color: blue;
+    color: red;
+  }
+
+}
+
+div{
+  clear: right;
 }
 
 .modInsert form label{
