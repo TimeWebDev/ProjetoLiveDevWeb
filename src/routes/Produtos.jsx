@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import styles from '../css/Produtos.module.css';
 import ModalInserirProdutos from '../components/ModalInserirProdutos';
@@ -21,6 +20,7 @@ export default function Produtos() {
       .then(() => (window.location = '/produtos'))
       .catch((error) => console.log(error));
   };
+
 
   const [produtoId, setProdutoId]=useState('')
   const handleEdit = (prod)=>{
