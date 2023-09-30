@@ -73,6 +73,7 @@ export default function Produtos() {
       </table>
       {open ? <ModalInserirProdutos open={open} setOpen={setOpen} produtoId={produtoId}/> : ''}
       
+      
     </div>
   );
 }

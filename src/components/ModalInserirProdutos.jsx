@@ -30,6 +30,7 @@ export default function ModalInserirProdutos(props) {
     metodo = 'put';
   }
 
+  
   //Função de preenchimento dos campos:
   const handleChange = (e) => {
     const { name, value } = e.target;
