@@ -1,3 +1,18 @@
-img{
+
+.voltar{
+  font-size: 30px;
+  margin-left: 45%;
+  margin-top: 50px;
+  color: #fff;
+  background-color: blue;
+  border-radius: 5px;
+}
+.voltar:hover{
+  background-color: aquamarine;
+  color: #000;
+}
+.img1{
+  width:80%;
+  margin-left: 10%;
   background-size: cover;
 }
