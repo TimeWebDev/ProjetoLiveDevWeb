@@ -11,6 +11,13 @@
       "preco": "3333",
       "desc": "3333",
       "id": 2
+    },
+    {
+      "nome": "TESTE",
+      "preco": "232323",
+      "desc": "Um Cubo",
+      "img": null,
+      "id": 3
     }
   ]
 }

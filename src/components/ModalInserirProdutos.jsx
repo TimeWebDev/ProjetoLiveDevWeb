@@ -21,7 +21,7 @@ export default function ModalInserirProdutos(props) {
     nome: '',
     preco: '',
     desc: '',
-    img: image,
+    img: '',
   });
 
   //Definindo se é cadastro ou Edição
@@ -64,6 +64,19 @@ export default function ModalInserirProdutos(props) {
     setProdId('')
     props.setOpen(false);
   };
+
+  // const convertImgToBase64 = (e) =>{
+    
+  //   let arq1 = e.target.files;
+
+  //   let fr = new FileReader();
+
+  //   fr.readAsDataURL(arq1[0]);
+  //   fr.onloa = () => {
+  //     console.log(fr.result);
+  //     setProduto({ ...produto, img: fr.result });
+  //   }
+  // };  
 
   return (
     <div className={styles.fundo}>
@@ -114,7 +127,7 @@ export default function ModalInserirProdutos(props) {
                 onChange={handleChange}
               />
             </div>
-            <div>
+            {/* <div>
               <label htmlFor="idImg" className={styles.info}>
                 Imagem:
               </label>
@@ -123,10 +136,10 @@ export default function ModalInserirProdutos(props) {
                 id="idImg"
                 name="img"
                 value={produto.img}
-                onChange={(e) => setImage(e.target.files[0])}
+                onChange={convertImgToBase64}
               />
-            </div>
-            <div>
+            </div> */}
+            {/* <div>
               {image ? (
                 <img
                   src={URL.createObjectURL(image)}
@@ -141,7 +154,7 @@ export default function ModalInserirProdutos(props) {
                   className={styles.img}
                 />
               )}
-            </div>
+            </div> */}
             <div>
               <button className={styles.btnCad}>Cadastrar</button>
             </div>
