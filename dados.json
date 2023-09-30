@@ -1,3 +1,16 @@
 {
-  "produtos": []
+  "produtos": [
+    {
+      "nome": "3333333",
+      "preco": "2",
+      "desc": "2",
+      "id": 1
+    },
+    {
+      "nome": "teste tw",
+      "preco": "3333",
+      "desc": "3333",
+      "id": 2
+    }
+  ]
 }
