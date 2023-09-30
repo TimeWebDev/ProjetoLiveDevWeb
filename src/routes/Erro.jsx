@@ -1,7 +1,11 @@
 import React from 'react'
+import Error from '../img/Error.png'
+import styles from '../css/Error.module.css'
 
 export default function Erro() {
   return (
-    <div>Erro</div>
+    <div>
+      <img src={Error}/>
+    </div>
   )
 }

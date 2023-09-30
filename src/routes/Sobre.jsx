@@ -8,8 +8,8 @@ export default function Sobre() {
         LIVE MINISTRADA PELOS{' '}
         <span className={styles.nomeProf}>PROFESSORES:</span>
       </h1>
-      <h2>Luis Carlos Silva</h2>
       <h2>Alexandre de Jesus</h2>
+      <h2>Luis Carlos Silva</h2>
       <h2>Wellington Cidade</h2>
     </section>
   );
