@@ -71,12 +71,12 @@ export default function ModalInserirProdutos(props) {
         <h1 className={styles.tituloCadProd}>Cadastrar Produtos</h1>
         <form onSubmit={handleSubmit} className={styles.formProd}>
           <fieldset className={styles.fieldProd}>
-            <button
+            <span
               onClick={() => props.setOpen(false)}
               className={styles.btnFechar}
             >
               X
-            </button>
+            </span>
             <legend className={styles.info}>Informações do Produto</legend>
             <div>
               <label htmlFor="idNome" className={styles.info}>
