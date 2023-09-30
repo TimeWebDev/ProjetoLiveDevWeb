@@ -2,13 +2,14 @@ import { useState, useEffect } from 'react';
 import styles from '../css/ModalInsert.module.css';
 
 export default function ModalInserirProdutos(props) {
-  let prodId = props.produtoId;
+  const [prodId, setProdId] = useState(props.produtoId);
   console.log(prodId);
   //Título da página
   if (prodId) {
     document.title = 'Editar Produto';
   } else {
     document.title = 'Cadastrar Produtos';
+    console.log(prodId);
   }
 
   //ID do produto sendo recebido por props
@@ -59,6 +60,7 @@ export default function ModalInserirProdutos(props) {
       .catch((err) => console.log(err));
 
     //Encerrar o modal
+    setProdId('')
     props.setOpen(false);
   };
 
